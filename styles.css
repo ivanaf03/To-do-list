@@ -1,0 +1,180 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --green: #0b8e50;
+    --ligthGreen: #08b321;
+    --lime: #c6e13d;
+    --yellow: #fffa99;
+    --white: #fffbe6;
+}
+
+body {
+    background-color: var(--ligthGreen);
+    font-family: "Playwrite PE", cursive;
+}
+
+h1 {
+    font-family: "Matemasie", sans-serif;
+    text-align: center;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 4em;
+    color: var(--white);
+    border: 0.3em solid var(--lime);
+    border-radius: 90%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexible {
+    display: flex;
+    flex-direction: row;
+}
+
+form input[type="text"] {
+    background-color: var(--green);
+    margin-left: 20%;
+    
+}
+
+#inputTitle {
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    color: var(--white);
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0.3em;
+    border: 6px solid var(--white);
+    border-bottom: none;
+    border-bottom-right-radius: 1em;
+}
+
+#inputBody {
+    margin-right: 20%;
+    border-top-right-radius: 1em;
+    color: var(--white);
+    font-size: 0.9em;
+    padding: 0.3em;
+    border: 6px solid var(--white);
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+input::placeholder {
+    color: var(--yellow);
+    opacity: 0.4;
+}
+
+form input[type="submit"] {
+    margin-left: -1em;
+    font-size: 3em;
+    border-radius: 90%;
+    height: 1.4em;
+    width: 1.4em;
+    border: 3px solid var(--white);
+    background-color: var(--lime);
+    text-align: center;
+    align-items: center;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+form input[type="submit"]:hover {
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--ligthGreen);
+}
+
+.taskContainer {
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: var(--green);
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 1em;
+    color: var(--white);
+    border-radius: 1em;
+    border: 6px solid var(--white);
+    padding: 1em;
+    margin-bottom: 3em;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+#taskTitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 2em;
+    font-style: italic;
+}
+
+#taskBody {
+    padding-bottom: 3em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.delete {
+    width: 2em;
+    margin-right: 0.2em;
+}
+
+.delete:hover {
+    cursor: pointer;
+}
+
+.separator {
+    display: flex;
+    justify-content: space-between;
+}
+
+#stats {
+    color: var(--white);
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    margin-bottom: 2em;
+    font-size: 2em;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    background-color: var(--lime);
+    cursor: pointer;
+    margin-left: -2em;
+    margin-top: -2em;
+}
+
+input[type="checkbox"]:checked + label {
+    background-color: var(--lime);
+}
+
+input[type="checkbox"]:checked + label:before {
+    content: '✓';
+    display: block;
+    color: black;
+    text-align: center;
+    line-height: 10px;
+    font-size: 6em;
+}
